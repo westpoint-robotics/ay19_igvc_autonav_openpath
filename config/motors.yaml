@@ -1,0 +1,38 @@
+left_motor:
+    controller:
+        package: dynamixel_controllers
+        module: joint_torque_controller
+        type: JointTorqueController
+    joint_name: left_joint
+    joint_speed: 40.0
+    motor:
+        id: 5
+        init: 0
+        min: 0
+        max: 4095
+
+right_motor:
+    controller:
+        package: dynamixel_controllers
+        module: joint_torque_controller
+        type: JointTorqueController
+    joint_name: right_joint
+    joint_speed: 40.0
+    motor:
+        id: 6
+        init: 0
+        min: 0
+        max: 4095
+
+hokuyo_motor:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: hokuyo_joint
+    joint_speed: 100
+    motor:
+        id: 7
+        init: 0
+        min: 0
+        max: 4096

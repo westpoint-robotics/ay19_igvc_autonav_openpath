@@ -1,0 +1,26 @@
+<!-- -*- mode: XML -*- -->
+
+<launch>
+   
+
+
+    
+
+
+	<node name="urg_node" pkg="urg_node" type="urg_node">
+        <rosparam>
+            ip_address: "192.168.0.10"
+        </rosparam>
+	</node>
+
+	<node name="drive" pkg="stembot" type="drive_jackal.py" output="screen">
+	</node>
+	<node name="lidar" pkg="stembot" type="lidar.py" output="screen">
+	</node>
+	<node name="joy_control" pkg="stembot" type="joy_control.py" output="screen">
+	</node>
+	<node name="gui" pkg="stembot" type="gui.py" output="screen">
+	</node>
+	<node name="joy_node" pkg="joy" type="joy_node">
+	</node>
+</launch>
