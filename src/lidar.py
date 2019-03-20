@@ -25,7 +25,7 @@ def loop():
 
 	#print urg_list
 
-	pw=1.3 #width of the robot
+	pw=.6 #width of the robot
 
 	ranges=[] #initialize array to store maximum distance that
 			  #robot can travel at each beam
@@ -83,8 +83,8 @@ def loop():
 			elif ranges[int((num_beams/2)/beam_cut)]>1.0:
 				drive.publish('f')
 				angle=3.3
-			elif max(ranges)<.5:
-				drive.publish('cwf')
+			#elif max(ranges)<.5:
+			#	drive.publish('cwf')
 			elif ranges.index(max(ranges)) < 0+((num_beams/beam_cut)/3):
 				drive.publish('cwf')
 			elif ranges.index(max(ranges)) < ((num_beams/2)/beam_cut)-((10)/beam_cut):

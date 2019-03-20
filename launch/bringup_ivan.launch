@@ -5,13 +5,7 @@
 
 
     
-
-
-	<node name="urg_node" pkg="urg_node" type="urg_node">
-        <rosparam>
-            ip_address: "192.168.0.199"
-        </rosparam>
-	</node>
+	<include file="/home/autonav/catkin_ws/src/stembot/launch/sick.launch" />
 
 	<node name="drive" pkg="stembot" type="drive_jackal.py" output="screen">
 	</node>
